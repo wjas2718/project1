@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose carefully...</title>
+    <style>
+    body {
+        background: #2E2E38;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #plant1 {
+        position: absolute;
+        left: 0pt;
+    }
+
+    #plant2 {
+        position: absolute;
+        left: 300pt;
+    }
+    
+    #plant3 {
+        position: absolute;
+        left: 600pt;
+    }
+
+    button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+    }
+
+    span{
+        position: absolute;
+        left: 473pt;
+    }
+    </style>
+</head>
+<body>
+    <span id='timer'>
+    </span>
+    
+    <script>
+        var timelimit = 2700;
+        let timepassed = 0;
+        let timeleft = timelimit;
+
+        function timer(){
+            setInterval(function () {
+                timepassed = timepassed + 1;
+                timeleft = timelimit - timepassed;
+
+                document.getElementById('timer').innerHTML=formatTime(timeleft);
+            }, 1000);   
+        }
+
+        timer();
+        
+        function formatTime(time){
+            var minutes = Math.floor(time / 60);
+            var seconds = time % 60;
+
+            if (seconds < 10) {
+                seconds = `0${seconds}`;
+            }
+
+            return `${minutes}:${seconds}`;
+        }
+
+        function plant(){
+            if (confirm("are you sure?")) location.replace('/Users/macbookpro13/Desktop/Project/set.html') ;
+            else {}
+        }
+    </script>
+    
+    <button onclick="plant()"><img id = 'plant1' src = "plantB.svg" width="495" height=auto>
+    </button>
+    <button onclick="plant()"><img id = 'plant2' src = "plantC.svg" width="495" height=auto>
+    </button>
+    <button onclick="plant()"><img id = 'plant3' src = "plantA.svg" width="495" height=auto>
+    </button>
+</body>
+</html>

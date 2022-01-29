@@ -1,0 +1,84 @@
+body{
+    background: #2E2E38;
+    font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+}
+
+#mail {
+    display: block;
+    margin-top: 45pt;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800pt;
+}
+
+.quiz {
+    left:0;
+    right:0;
+    top: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    width: 40%;
+    
+    border-radius: 2px;
+    background:whitesmoke;
+}
+
+.btn {
+    background-color: transparent;
+    color: crimson;
+    border: 2px solid crimson;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+}
+
+#lab1::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab21::before {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab2::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab22::before {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab3::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab23::before {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab4::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#lab24::before {
+    content: "\a";
+    white-space: pre;
+}
+
+.part {
+    color: white;
+    display: block;
+}

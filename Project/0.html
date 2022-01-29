@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>the other side</title>
+    <style>
+        #room1 {
+            display: block;
+            margin-top: 45pt;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500pt;
+        }
+    </style>
+    <script>
+        function funct1() {
+            var x = document.getElementById('room1');
+            x.src = '/Users/macbookpro13/Desktop/Project/IMG_1518.JPG';
+            x.setAttribute('usemap','#map5');
+        }
+        
+        function funct2() {
+            document.getElementById('room1').src='/Users/macbookpro13/Desktop/Project/room3.jpeg';
+        }
+    </script>
+</head>
+<body>
+    <map name="map0">
+        <area shape="poly" coords="214,20,229,208,244,217,369,211,372,26" onclick="funct1()"/>
+    </map>
+    <map name="map5">
+        <area shape="rect" coords="300,210,325,237" onclick="funct2()">
+    </map>
+
+    <img id='room1' src = '/Users/macbookpro13/Desktop/Project/room1.jpeg' usemap="#map0">
+</body>
+</html>

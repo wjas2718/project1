@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bus</title>
+    <style>
+        body{
+            background-color: #2E2E38;
+        }
+        #bus{
+            position:relative;
+            left: 170pt;
+            right: auto;
+        }
+
+        #button{
+            position: absolute;
+            left: 440pt;
+            top: 363pt;
+        }
+        #rectangle1{
+            position: absolute;
+            top: 0pt;
+            left: 100pt;
+            height: 20pt;
+            width: 800pt;
+            background-color: #2E2E38;
+        }
+        #rectangle2{
+            position: absolute;
+            top: 440pt;
+            left: 100pt;
+            height: 20pt;
+            width: 800pt;
+            background-color: #2E2E38;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: auto;
+        }
+    </style>
+    <script>
+        var newnum = 0
+        function funct(start){
+            while(newnum < 11){
+                newnum = start + 1;
+                num = newnum.toString();
+                var name = "/Users/macbookpro13/Desktop/Project/bus/"+ num +".JPG";
+                document.getElementById('bus').src=name;
+                return newnum;
+            }
+            if (newnum == 11) document.getElementById('bus').src='/Users/macbookpro13/Desktop/Project/bus/IMG_1514.JPG';
+        }
+    </script>
+</head>
+<body>
+    <img id="bus" src='/Users/macbookpro13/Desktop/Project/bus/0.JPG' width="800" height=auto>
+    <div id="rectangle1"></div>
+    <div id="rectangle2"></div>
+    <div id="button">
+        <button onclick="funct(newnum)">
+            <img src='/Users/macbookpro13/Desktop/Project/arrow3.svg' width="80pt" height=auto>
+        </button>
+    </div>
+</body>
+</html>
